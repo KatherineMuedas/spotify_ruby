@@ -4,7 +4,7 @@ require "spotify_ruby/artist"
 
 module SpotifyRuby
   BASE_URL = 'https://api.spotify.com'
-  DEFAULT_PARAMS = {}
+  DEFAULT_PARAMS = {acces_token: ENV['BLABLA']}
   DEFAULT_HEADERS = {}
   #{"Authorization" => "Bearer #{ENV['MEETUP_API_KEY']}"}
 end

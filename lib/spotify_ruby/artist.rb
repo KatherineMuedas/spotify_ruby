@@ -1,7 +1,6 @@
 module SpotifyRuby
   class Artist
 
-
     def self.search(q, options = {})
       SpotifyRuby::Search.new("/v1/search?type=artist&q=#{q}", options)
     end
@@ -14,8 +13,8 @@ module SpotifyRuby
       SpotifyRuby::Search.new("/v1/artists/#{id}/albums", options)
     end
 
-
+    def self.search_top_tracks_by_artist(id, country, options={})
+      SpotifyRuby::Search.new("/v1/artists/#{id}/top-tracks?country=#{country}", options)
+    end
   end
 end
-
-# SpotifyRuby::Artist.search('Lady', hkjjk: jkhkjhkj)
